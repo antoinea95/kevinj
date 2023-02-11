@@ -31,9 +31,12 @@
     &--arrow {
         display: block;
         position: absolute;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
         bottom: 15%;
         text-align: center;
-        width: 100%;
+
         animation: arrowScroll 1.5s infinite ease-in-out;
 
         img {
