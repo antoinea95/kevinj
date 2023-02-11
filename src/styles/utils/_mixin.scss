@@ -1,0 +1,27 @@
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin tabletScreen {
+    @media  screen and (max-width: 1130px) {
+        @content;
+    }
+}
+
+@mixin mobileScreen {
+    @media  screen and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin transition($time) {
+    transition: all $time ease-in-out;
+}
+
+@mixin container {
+    width: 90%;
+    margin: 10rem auto;
+}

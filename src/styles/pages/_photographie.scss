@@ -1,0 +1,38 @@
+.main {
+  width: 100%;
+  @include flex(row, center, center)
+}
+
+.photographie--category {
+  @include flex(row, space-evenly, center);
+  position: sticky;
+  top: 11%;
+  background-color: $secondary-color;
+  z-index: 100;
+  width: 100%;
+
+  li {
+    font-family: 'Playfair Display', serif;
+    margin: 1rem 2rem;
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+    cursor: pointer;
+    @include transition(300ms);
+    color: $primary-color;
+
+    @include mobileScreen {
+      margin: 1rem 0.5rem;
+      padding: 0.3rem 0 0.2rem 0;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+
+  li.active {
+    border-bottom: 1px solid $primary-color;
+  }
+}
+

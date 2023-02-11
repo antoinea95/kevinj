@@ -1,0 +1,121 @@
+.article {
+  position: relative;
+  width: 100%;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+  @include flex(row, center, center);
+
+  @include mobileScreen {
+    @include flex(column, flex-start, center);
+  }
+
+  &--video {
+    position: relative;
+    width: 40%;
+    margin: 5rem 2.5rem 5rem 2.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    @include transition(300ms);
+
+    @include mobileScreen {
+      width: 90%;
+      margin: 1rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: "Play";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include flex(row, center, center);
+      padding: 3rem;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: $secondary-color;
+      color: $primary-color;
+      text-transform: uppercase;
+      @include transition(300ms);
+      opacity: 0;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--info {
+    @include flex(column, space-between, flex-start);
+    width: 40%;
+    height: 30rem;
+    margin: 5rem 2.5rem 5rem 2.5rem;
+
+    @include mobileScreen {
+      width: 90%;
+      margin: 1rem;
+    }
+
+    &__right {
+      @include flex(column, space-between, flex-end);
+
+      @include mobileScreen {
+        @include flex(column, space-between, flex-start);
+      }
+
+      p {
+        text-align: right;
+
+        @include mobileScreen {
+          text-align: left;
+        }
+      }
+    }
+
+    &__gps {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__lieu {
+      @include flex(row, flex-start, center);
+      font-size: 1.5rem;
+
+      p {
+        text-transform: uppercase;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &--fullVideo {
+    position: relative;
+    @include flex(row, center, center);
+    animation: showVideo 500ms 300ms backwards;
+    width: 100%;
+    max-width: 100rem;
+
+    @include tabletScreen {
+      width: 90%;
+    }
+
+    &__btn {
+      cursor: pointer;
+      position: absolute;
+      @include flex(row, center, center);
+      top: 0;
+      right: 0;
+      width: 5rem;
+      height: 5rem;
+      background-color: $secondary-color;
+      color: $primary-color;
+      font-size: 2rem;
+      font-weight: 500;
+      border: none;
+    }
+  }
+}

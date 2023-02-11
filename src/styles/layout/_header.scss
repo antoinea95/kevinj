@@ -1,0 +1,134 @@
+.header {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 10rem;
+  padding: 2rem 0;
+  @include flex(row, space-between, center);
+
+  &--logo {
+    width: 20rem;
+    animation: introLogo 1s ease-in-out;
+
+    @include mobileScreen {
+      width: 14rem;
+    }
+  }
+
+  &--white {
+    background-color: $primary-color;
+  }
+}
+
+.nav {
+  width: 80%;
+  padding: 0 5rem;
+  max-width: 70rem;
+
+  &--list {
+    @include flex(row, space-between, center);
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    width: 100%;
+
+    &__white a {
+      color: $primary-color;
+
+      @include mobileScreen {
+        color: $secondary-color;
+      }
+    }
+
+    &__black a {
+      color: $secondary-color;
+    }
+
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      @include transition(200ms);
+      padding-bottom: 1rem;
+
+      &:hover {
+        border-bottom: 1px solid;
+      }
+    }
+
+    @include mobileScreen {
+      @include flex(column, space-evenly, center);
+      background-color: $primary-color;
+      position: absolute;
+      padding-top: 6rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(0);
+      top: 40%;
+      right: 5%;
+      width: 5rem;
+      height: 1rem;
+      @include transition(300ms);
+      overflow: hidden;
+    }
+
+    &__active {
+      opacity: 1;
+      width: 100%;
+      right: 0;
+      top: 90%;
+      height: 30rem;
+      transform: translateY(0);
+      opacity: 1;
+      @include transition(300ms);
+      pointer-events: all;
+    }
+  }
+
+  &--burger {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 8rem;
+    position: absolute;
+    right: 0;
+    top: 35%;
+    transform: rotate(360deg);
+    @include transition(300ms);
+
+    @include mobileScreen {
+      display: block;
+      pointer-events: all;
+    }
+
+    &__open {
+      @include transition(300ms);
+      transform: rotate(180deg);
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    &__close {
+      border: none;
+      background-color: transparent;
+      width: 8rem;
+      position: absolute;
+      right: 0;
+      top: 35%;
+      transform: rotate(360deg);
+      opacity: 0;
+      pointer-events: none;
+      @include transition(300ms);
+      cursor: pointer;
+    }
+  }
+}
+
+.close {
+  pointer-events: all;
+  transform: rotate(180deg);
+  opacity: 1;
+  @include transition(300ms);
+}

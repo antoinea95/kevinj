@@ -1,0 +1,68 @@
+.container {
+    height: 100vh;
+    @include flex(column, center, center);
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    &--video {
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &--welcome {
+        font-family: 'Playfair Display', serif;
+        color: white;
+        font-size: 6rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
+
+    &--arrow {
+        display: block;
+        position: absolute;
+        bottom: 15%;
+        text-align: center;
+        width: 100%;
+        animation: arrowScroll 1.5s infinite ease-in-out;
+
+        img {
+            width: 10rem;
+        }
+    }
+}
+
+.social {
+    width: 25rem;
+    height: 5rem;
+    @include flex(row, space-evenly, center);
+    animation: showPhoto 1s 500ms backwards;
+
+    a {
+        background-color: $primary-color;
+        @include flex(row, center, center);
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 3rem;
+        color: $secondary-color;
+        @include transition(300ms);
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+

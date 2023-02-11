@@ -1,0 +1,39 @@
+.archi {
+    @include container;
+    
+
+    &--list {
+
+        @include flex(row, center, center);
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 4vmin;
+        
+        @include mobileScreen {
+            width: 95%;
+        }
+    
+        &__item {
+
+            height: 45rem;
+            object-fit: cover;
+            @include transition(300ms); 
+            cursor: pointer;
+            
+    
+            @include tabletScreen {
+                height: 33rem;
+            }
+    
+            @include mobileScreen {
+                width: 95%;
+                height: auto;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+

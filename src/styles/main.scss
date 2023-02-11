@@ -1,0 +1,20 @@
+@import './utils/variables';
+@import './utils/mixin';
+@import './utils/keyframes.scss';
+
+@import './base/reset';
+@import './base/typography';
+
+@import './composants/map';
+@import './composants/caroussel';
+@import './composants/architecture';
+@import './composants/nature';
+@import './composants/video';
+@import './composants/montagne';
+
+@import './pages/photographie';
+@import './pages/contact';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/presentation';

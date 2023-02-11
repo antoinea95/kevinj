@@ -1,0 +1,11 @@
+.map {
+    @include flex(row, center, center);
+    padding: 10rem 0;
+    width: 100%;
+    height: 100vh;
+    animation: showMap 1s ease-in-out 600ms backwards;
+
+    img {
+        width: 90rem;
+    }
+}

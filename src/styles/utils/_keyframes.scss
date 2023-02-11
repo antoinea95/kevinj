@@ -1,0 +1,87 @@
+// homepage
+
+
+@keyframes arrowScroll {
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6rem);
+    }
+}
+
+@keyframes burger {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+
+    100% {
+        opacity: 1;
+        top: 80%;
+    }
+}
+
+// photographie page
+
+@keyframes showTitle {
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 72%;
+        flex-wrap: wrap;
+    }
+}
+
+@keyframes showCaroussel {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showVideo {
+    0% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes showPhotoTitle {
+
+    0% {
+        opacity: 0;
+        transform: translateY(600rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showPhoto {
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
