@@ -13,7 +13,6 @@ function App() {
 
   return (
     <>
-    <Router>
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route exact path="/photographie" element={<Photographie archi={archi} nature={nature} montagne={montagne} shooting={shooting} chill={chill} />}/>
@@ -21,7 +20,6 @@ function App() {
         <Route exact path="/immobilier" element={<Immobilier immobilier={immobilier}/>}/>
         <Route exact path="/contact" element={<Contact />}/>
       </Routes>
-    </Router>
     </>
   );
 }
