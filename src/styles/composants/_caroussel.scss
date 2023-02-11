@@ -1,7 +1,7 @@
 
 .shooting {
     @include flex(column, space-evenly, center);
-    margin-top: 5rem;
+    margin-top: 10rem;
 
     &--content {
         margin: 0 auto;

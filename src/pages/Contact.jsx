@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { useState } from "react";
 import gsap from "gsap";
 import Social from "../composants/Social";
+import Header from "../layout/Header";
 
 export default function Contact() {
   const form = useRef();
@@ -77,6 +78,7 @@ export default function Contact() {
 
   return (
     <>
+      <Header />
       <main>
         <article className="contact">
           <h2 className="contact--title"> Vous avez un projet visuel ? Contactez-moi</h2>

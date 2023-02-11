@@ -5,7 +5,7 @@ export default function Immobilier({immobilier}) {
 
   return (
     <>
-      <Header />
+          <Header />
           <main>
         {immobilier.map((item) => {
           return (

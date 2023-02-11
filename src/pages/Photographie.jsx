@@ -30,6 +30,7 @@ export default function Photographie({nature, shooting, archi, montagne, chill})
 
   return (
     <>
+      <Header />
       <main>
           <ul className="photographie--category">
             <li className="photographie--item active" onClick={selectCategory}> Shooting </li>

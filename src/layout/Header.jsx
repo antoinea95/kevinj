@@ -11,7 +11,8 @@ import logo from "../images/assets/logo.svg";
 import logoBlack from "../images/assets/logo-black.svg";
 
 export default function Header() {
-  let location = window.location.pathname;
+  let url = window.location.href.split("/")
+  let location = url[url.length-1];
 
   // animation when rendered
   useEffect(() => {
@@ -55,12 +56,14 @@ export default function Header() {
     btnClose.classList.toggle("close");
   }
 
+  console.log(location)
+
   return (
     <>
-      <header className={location === "/" ? "header" : " header header--white"}>
+      <header className={location === "" ? "header" : " header header--white"}>
         <div className="header--logo">
           <Link aria-label="Retour vers la page d'accueil" to={`/`}>
-            {location === "/" ? (
+            {location === "" ? (
               <img src={logo} alt="Logo de Kevin Jacquet" />
             ) : (
               <img src={logoBlack} alt="Logo de Kevin Jacquet" />
@@ -69,14 +72,14 @@ export default function Header() {
         </div>
         <nav className="nav">
           <button className="nav--burger" onClick={handleBurger}>
-            {location === "/" ? (
+            {location === "" ? (
               <img src={burgerWhite} alt="afficher le menu" />
             ) : (
               <img src={burger} alt="afficher le menu" />
             )}
           </button>
           <button className="nav--burger__close" onClick={handleBurger}>
-          {location === "/" ? (
+          {location === "" ? (
               <img src={closeWhite} alt="afficher le menu" />
             ) : (
               <img src={close} alt="afficher le menu" />
@@ -85,7 +88,7 @@ export default function Header() {
 
           <ul
             className={
-              location === "/"
+              location === ""
                 ? "nav--list nav--list__white"
                 : "nav--list nav--list__black"
             }
