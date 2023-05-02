@@ -7,6 +7,7 @@ export default function Immobilier({immobilier}) {
     <>
           <Header />
           <main>
+            <div className="video">
         {immobilier.map((item) => {
           return (
             <Itemvideo
@@ -20,6 +21,7 @@ export default function Immobilier({immobilier}) {
             />
           );
         })}
+        </div>
       </main>
     </>
   );

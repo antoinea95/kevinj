@@ -1,7 +1,13 @@
 
 .shooting {
     @include flex(column, space-evenly, center);
-    margin-top: 10rem;
+    margin: 15rem auto;
+
+
+    &--title {
+        font-size: 5rem;
+        white-space: nowrap;
+    }
 
     &--content {
         margin: 0 auto;

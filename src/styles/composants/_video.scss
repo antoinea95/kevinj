@@ -1,8 +1,12 @@
+.video {
+  margin-top: 10rem;
+}
+
+
 .article {
   position: relative;
   width: 100%;
-  padding-top: 5rem;
-  margin-bottom: 5rem;
+  height: 100vh;
   @include flex(row, center, center);
 
   @include mobileScreen {
@@ -10,8 +14,9 @@
   }
 
   &--video {
+
     position: relative;
-    width: 40%;
+    width: 50%;
     margin: 5rem 2.5rem 5rem 2.5rem;
     object-fit: cover;
     cursor: pointer;
@@ -49,14 +54,22 @@
   }
 
   &--info {
-    @include flex(column, space-between, flex-start);
+    @include flex(column, space-evenly, flex-start);
     width: 40%;
-    height: 30rem;
     margin: 5rem 2.5rem 5rem 2.5rem;
 
     @include mobileScreen {
       width: 90%;
       margin: 1rem;
+    }
+
+    &__title {
+      position: absolute;
+      top: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 5vw;
+      white-space: nowrap;
     }
 
     &__right {
@@ -84,6 +97,7 @@
     &__lieu {
       @include flex(row, flex-start, center);
       font-size: 1.5rem;
+      margin: 2rem 0;
 
       p {
         text-transform: uppercase;
@@ -95,7 +109,7 @@
   &--fullVideo {
     position: relative;
     @include flex(row, center, center);
-    animation: showVideo 500ms 300ms backwards;
+    transition: all 300ms ease-in-out;
     width: 100%;
     max-width: 100rem;
 

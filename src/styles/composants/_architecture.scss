@@ -1,5 +1,6 @@
 .archi {
     @include container;
+    margin: 15rem auto;
     
 
     &--list {
@@ -15,7 +16,7 @@
     
         &__item {
 
-            height: 45rem;
+            height: 80vh;
             object-fit: cover;
             @include transition(300ms); 
             cursor: pointer;

@@ -1,5 +1,6 @@
 .montagne {
     @include container;
+    margin: 15rem auto;
 
     &--list {
         @include flex(row, center, center);
@@ -16,7 +17,7 @@
         }
     
         &__item {
-            width: 45rem;
+            width: 60vh;
             cursor: pointer;
             @include transition(300ms);
     

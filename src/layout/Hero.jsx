@@ -32,9 +32,11 @@ export default function Hero() {
         <div className="presentation--picture">
           <img src={kevin} alt="Kevin Jacquet" />
         </div>
-        <div className="presentation--text">
+          <div className="presentation--title">
           <h2> Kevin Jacquet</h2>
-          <h3>  Bienvenue sur mon site officiel ! </h3>
+          </div>
+        <div className="presentation--text">
+          <h3>Bienvenue sur mon site !</h3>
           <p>
             Véritable passionné de photographie
             et de vidéo depuis plus de 10 ans, j’arpente les territoires
@@ -54,7 +56,6 @@ export default function Hero() {
             Je vous rassure, la diversité du monde ne se
             résume pas à ma région. De ce fait, vous pourrez aussi observer des
             images provenant de différents lieux en Europe.
-            <br></br>
             <br></br>
             En tout temps, je me
             ferais un plaisir de discuter avec vous, que ce soit sur les lieux

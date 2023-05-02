@@ -47,6 +47,10 @@ import nature1 from "./images/photos/nature/nb1.webp";
 import nature2 from "./images/photos/nature/nb2.webp";
 import nature3 from "./images/photos/nature/nb3.webp";
 import nature4 from "./images/photos/nature/nb4.webp";
+import nature5 from "./images/photos/nature/Caméléon.jpg";
+import nature6 from "./images/photos/nature/Coucou.jpg";
+import nature7 from "./images/photos/nature/Hamster.jpg";
+import nature8 from "./images/photos/nature/Loup.jpg";
 
 import montagne1 from "./images/photos/nature/montagne-1.webp";
 import montagne2 from "./images/photos/nature/montagne-2.webp";
@@ -69,6 +73,7 @@ import lac from "./images/video/Lac-Taney-short.mp4";
 import montchanais from "./images/video/mont-chanais-short.mp4";
 import montgrange from "./images/video/montgrange.mp4"
 import animauxmontgrange from "./images/video/animauxgrange.mp4"
+import novel from "./images/video/novel.mp4"
 
 const data = {
   archi: [archi1, archi2, archi4, archi3, archi5, archi6],
@@ -112,7 +117,7 @@ const data = {
     chill23,
     chill24,
   ],
-  nature: [nature1, nature2, nature3, nature4],
+  nature: [nature1, nature2, nature3, nature4, nature5, nature6, nature7, nature8],
   montagne: [
     montagne1,
     montagne2,
@@ -183,6 +188,19 @@ const data = {
       video: animauxmontgrange,
       iframe: (
         <iframe width="1046" height="501" src="https://www.youtube.com/embed/-7Myu5MLINk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      ),
+    },
+    {
+      position: "left",
+      name: "Novel, un lieu enchanteur",
+      location: "Novel, Haute-Savoie",
+      description: `Novel, petite station de ski située dans le chablais, en Haute-Savoie. Connue pour son domaine skiable familial et offre des pistes pour tous les niveaux de skieurs. 
+      Novel est également un lieu de prédilection pour les amateurs de ski de fond, avec des pistes tracées dans les forêts environnantes. Novel est une destination idéale pour les amoureux 
+      de la nature et des sports d'hiver, ainsi que pour ceux souhaitant se ressourcer dans un cadre enchanteur.  
+      `,
+      video: novel,
+      iframe: (
+        <iframe width="1046" height="501" src="https://www.youtube.com/embed/uzvRnVywqRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      
+        ),
     },
   ],
 

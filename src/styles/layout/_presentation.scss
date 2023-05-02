@@ -1,9 +1,11 @@
 #presentation {
-    @include flex(row, center, center);
-    background-color: $primary-color;
-    height: 88vh;
+    @include flex(row, space-between, center);
+    background-color: $secondary-color;
+    height: 100vh;
+    width: 100%;
+    margin-top: 2rem;
     position: sticky;
-    top: 13%;
+    top: 30rem;
 
     @include tabletScreen {
         @include flex(column, center, center);
@@ -16,9 +18,9 @@
 
     &--picture {
         @include flex(row, center, center);
-        width: 25%;
+        width: 30%;
         overflow: hidden;
-        margin: 3rem;
+        margin: 3rem 5rem;
 
         @include tabletScreen {
            width: 35rem;
@@ -34,11 +36,34 @@
         }
     }
 
+    &--title {
+        position: absolute;
+        left: 25%;
+        top: 5%;
+
+        h2 {
+            color: $primary-color;
+            font-size: 10vw;
+            margin: 1.1rem 0 0.5rem 0;
+            white-space: nowrap;
+
+            @include mobileScreen {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+
     &--text {
         @include flex(column, space-between, flex-start);
-        width: 45%;
+        width: 55%;
         padding-right: 2rem;
         padding-bottom: 2rem;
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        color: $primary-color;
 
         @include tabletScreen {
             @include flex(column, flex-start, flex-start);
@@ -47,14 +72,7 @@
             width: 90%;
         }
 
-        h2 {
-            margin: 1.1rem 0 0.5rem 0;
-
-            @include mobileScreen {
-                font-size: 3rem;
-                margin-bottom: 2rem;
-            }
-        }
+       
 
         p {
             font-size: 1.6rem;

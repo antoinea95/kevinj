@@ -1,5 +1,6 @@
 .nature {
     @include container;
+    margin: 15rem auto;
 
     &--list {
         @include flex(row, center, center);
@@ -15,7 +16,7 @@
         }
     
         &__item {
-            height: 30rem;
+            height: 80vh;
             cursor: pointer;
             @include transition(300ms);
     

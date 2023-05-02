@@ -134,7 +134,6 @@ body {
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: 4rem;
 }
 @media screen and (max-width: 1130px) {
   h2 {
@@ -145,7 +144,7 @@ h2 {
 h3 {
   font-weight: bolder;
   font-size: 1.6rem;
-  margin: 3rem 0;
+  margin: 1rem 0;
   text-transform: uppercase;
 }
 
@@ -168,7 +167,11 @@ h3 {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 10rem;
+  margin: 15rem auto;
+}
+.shooting--title {
+  font-size: 5rem;
+  white-space: nowrap;
 }
 .shooting--content {
   margin: 0 auto;
@@ -285,6 +288,7 @@ h3 {
 .archi {
   width: 90%;
   margin: 10rem auto;
+  margin: 15rem auto;
 }
 .archi--list {
   display: flex;
@@ -301,8 +305,9 @@ h3 {
   }
 }
 .archi--list__item {
-  height: 45rem;
-  object-fit: cover;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 300ms ease-in-out;
   cursor: pointer;
 }
@@ -324,6 +329,7 @@ h3 {
 .nature {
   width: 90%;
   margin: 10rem auto;
+  margin: 15rem auto;
 }
 .nature--list {
   display: flex;
@@ -342,7 +348,7 @@ h3 {
   }
 }
 .nature--list__item {
-  height: 30rem;
+  height: 80vh;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -361,11 +367,14 @@ h3 {
   }
 }
 
+.video {
+  margin-top: 10rem;
+}
+
 .article {
   position: relative;
   width: 100%;
-  padding-top: 5rem;
-  margin-bottom: 5rem;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -381,9 +390,10 @@ h3 {
 }
 .article--video {
   position: relative;
-  width: 40%;
+  width: 50%;
   margin: 5rem 2.5rem 5rem 2.5rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -422,10 +432,9 @@ h3 {
 .article--info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   width: 40%;
-  height: 30rem;
   margin: 5rem 2.5rem 5rem 2.5rem;
 }
 @media screen and (max-width: 800px) {
@@ -433,6 +442,14 @@ h3 {
     width: 90%;
     margin: 1rem;
   }
+}
+.article--info__title {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5vw;
+  white-space: nowrap;
 }
 .article--info__right {
   display: flex;
@@ -467,6 +484,7 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   font-size: 1.5rem;
+  margin: 2rem 0;
 }
 .article--info__lieu p {
   text-transform: uppercase;
@@ -478,7 +496,7 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  animation: showVideo 500ms 300ms backwards;
+  transition: all 300ms ease-in-out;
   width: 100%;
   max-width: 100rem;
 }
@@ -508,6 +526,7 @@ h3 {
 .montagne {
   width: 90%;
   margin: 10rem auto;
+  margin: 15rem auto;
 }
 .montagne--list {
   display: flex;
@@ -527,7 +546,7 @@ h3 {
   }
 }
 .montagne--list__item {
-  width: 45rem;
+  width: 60vh;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -559,7 +578,7 @@ h3 {
   justify-content: space-evenly;
   align-items: center;
   position: sticky;
-  top: 11%;
+  top: 10rem;
   background-color: #102a50;
   z-index: 100;
   width: 100%;
@@ -656,7 +675,7 @@ h3 {
 
 .header {
   z-index: 100;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 10rem;
@@ -812,7 +831,8 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero--welcome {
   font-family: "Playfair Display", serif;
@@ -865,12 +885,14 @@ h3 {
 #presentation {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #FFFAF0;
-  height: 88vh;
+  background-color: #102a50;
+  height: 100vh;
+  width: 100%;
+  margin-top: 2rem;
   position: sticky;
-  top: 13%;
+  top: 30rem;
 }
 @media screen and (max-width: 1130px) {
   #presentation {
@@ -888,9 +910,9 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 30%;
   overflow: hidden;
-  margin: 3rem;
+  margin: 3rem 5rem;
 }
 @media screen and (max-width: 1130px) {
   .presentation--picture {
@@ -906,14 +928,35 @@ h3 {
   width: 100%;
   height: 100%;
 }
+.presentation--title {
+  position: absolute;
+  left: 25%;
+  top: 5%;
+}
+.presentation--title h2 {
+  color: #FFFAF0;
+  font-size: 10vw;
+  margin: 1.1rem 0 0.5rem 0;
+  white-space: nowrap;
+}
+@media screen and (max-width: 800px) {
+  .presentation--title h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
 .presentation--text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 45%;
+  width: 55%;
   padding-right: 2rem;
   padding-bottom: 2rem;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  color: #FFFAF0;
 }
 @media screen and (max-width: 1130px) {
   .presentation--text {
@@ -924,15 +967,6 @@ h3 {
     padding-right: 0;
     max-width: 35rem;
     width: 90%;
-  }
-}
-.presentation--text h2 {
-  margin: 1.1rem 0 0.5rem 0;
-}
-@media screen and (max-width: 800px) {
-  .presentation--text h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
   }
 }
 .presentation--text p {

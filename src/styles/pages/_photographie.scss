@@ -6,7 +6,7 @@
 .photographie--category {
   @include flex(row, space-evenly, center);
   position: sticky;
-  top: 11%;
+  top: 10rem;
   background-color: $secondary-color;
   z-index: 100;
   width: 100%;

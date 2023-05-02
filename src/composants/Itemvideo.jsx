@@ -75,7 +75,7 @@ export default function Video({
     <article className="article article-left">
       {fullVideo ? (
         <section className="article--fullVideo">
-          <button
+             <button
             className="article--fullVideo__btn"
             onClick={handleCloseFullVideo}
           >
