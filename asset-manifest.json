@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kevinj/static/css/main.7894e813.css",
+    "main.css": "/kevinj/static/css/main.97353a2c.css",
     "main.js": "/kevinj/static/js/main.f982cc19.js",
     "static/media/animauxgrange.mp4": "/kevinj/static/media/animauxgrange.bc6b7431b419a08b9b0a.mp4",
     "static/media/montgrange.mp4": "/kevinj/static/media/montgrange.020735b9583b07feca5f.mp4",
@@ -84,11 +84,11 @@
     "static/media/arrow-next.svg": "/kevinj/static/media/arrow-next.59ba987a4ca21e3d83313f0f9f0a0f1c.svg",
     "static/media/arrow-prev.svg": "/kevinj/static/media/arrow-prev.3ce18506b6e117156842efd6fd2de842.svg",
     "static/media/arrow.svg": "/kevinj/static/media/arrow.d6db0fd3eeb8e9ff56cc1f794ac688ef.svg",
-    "main.7894e813.css.map": "/kevinj/static/css/main.7894e813.css.map",
+    "main.97353a2c.css.map": "/kevinj/static/css/main.97353a2c.css.map",
     "main.f982cc19.js.map": "/kevinj/static/js/main.f982cc19.js.map"
   },
   "entrypoints": [
-    "static/css/main.7894e813.css",
+    "static/css/main.97353a2c.css",
     "static/js/main.f982cc19.js"
   ]
 }
