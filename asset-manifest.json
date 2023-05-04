@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/kevinj/static/css/main.327811ac.css",
-    "main.js": "/kevinj/static/js/main.1d16a2b4.js",
+    "main.css": "/kevinj/static/css/main.c2bbfe5e.css",
+    "main.js": "/kevinj/static/js/main.ac321c3e.js",
     "static/media/animauxgrange.mp4": "/kevinj/static/media/animauxgrange.bc6b7431b419a08b9b0a.mp4",
     "static/media/montgrange.mp4": "/kevinj/static/media/montgrange.020735b9583b07feca5f.mp4",
     "static/media/villa-renee-short.mp4": "/kevinj/static/media/villa-renee-short.23d2cee48b150a57736c.mp4",
     "static/media/mont-chanais-short.mp4": "/kevinj/static/media/mont-chanais-short.b187175a18f33680218c.mp4",
     "static/media/Lac-Taney-short.mp4": "/kevinj/static/media/Lac-Taney-short.dec90c6dd2a084f35a89.mp4",
     "static/media/fouilloux-short.mp4": "/kevinj/static/media/fouilloux-short.ba7ac0db5e7e2e67b89f.mp4",
+    "static/media/novel.mp4": "/kevinj/static/media/novel.ba3c3b4be6c05fa29dd5.mp4",
+    "static/media/Loup.jpg": "/kevinj/static/media/Loup.dbf63748a63d04d6ad59.jpg",
+    "static/media/Caméléon.jpg": "/kevinj/static/media/Caméléon.2aaa1586444f1b6254e7.jpg",
+    "static/media/Hamster.jpg": "/kevinj/static/media/Hamster.72afd13df5302e88ab55.jpg",
+    "static/media/Coucou.jpg": "/kevinj/static/media/Coucou.6086897bac4b3a4b7672.jpg",
     "static/media/archi-3.webp": "/kevinj/static/media/archi-3.d7859c6c0ffe183f541d.webp",
     "static/media/archi-2.webp": "/kevinj/static/media/archi-2.c1320a47a6f39929bbb3.webp",
     "static/media/montagne-14.webp": "/kevinj/static/media/montagne-14.e3396b0053dbfd00ae67.webp",
@@ -79,11 +84,11 @@
     "static/media/arrow-next.svg": "/kevinj/static/media/arrow-next.59ba987a4ca21e3d83313f0f9f0a0f1c.svg",
     "static/media/arrow-prev.svg": "/kevinj/static/media/arrow-prev.3ce18506b6e117156842efd6fd2de842.svg",
     "static/media/arrow.svg": "/kevinj/static/media/arrow.d6db0fd3eeb8e9ff56cc1f794ac688ef.svg",
-    "main.327811ac.css.map": "/kevinj/static/css/main.327811ac.css.map",
-    "main.1d16a2b4.js.map": "/kevinj/static/js/main.1d16a2b4.js.map"
+    "main.c2bbfe5e.css.map": "/kevinj/static/css/main.c2bbfe5e.css.map",
+    "main.ac321c3e.js.map": "/kevinj/static/js/main.ac321c3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.327811ac.css",
-    "static/js/main.1d16a2b4.js"
+    "static/css/main.c2bbfe5e.css",
+    "static/js/main.ac321c3e.js"
   ]
 }
