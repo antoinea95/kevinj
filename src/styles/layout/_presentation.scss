@@ -11,8 +11,9 @@
 
     @include tabletScreen {
         @include flex(column, center, center);
-        padding: 10rem 3rem 3rem 3rem;
+        padding: 3rem;
         height: 100%;
+        width: 100%;
         position: sticky;
         top: 10rem;
     }
@@ -46,10 +47,10 @@
         top: 5%;
 
         @include tabletScreen {
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+           position: static;
         }
+
+       
 
         h2 {
             color: $secondary-color;

@@ -909,8 +909,9 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10rem 3rem 3rem 3rem;
+    padding: 3rem;
     height: 100%;
+    width: 100%;
     position: sticky;
     top: 10rem;
   }
@@ -946,9 +947,7 @@ h3 {
 }
 @media screen and (max-width: 1130px) {
   .presentation--title {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
   }
 }
 .presentation--title h2 {
