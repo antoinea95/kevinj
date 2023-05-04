@@ -108,7 +108,7 @@ export default function Contact() {
             </div>
 
             <div className="contact--form__div">
-              <label htmlFor="subject">Object</label>
+              <label htmlFor="subject">Objet</label>
               <input
                 type="text"
                 name="user_subject"

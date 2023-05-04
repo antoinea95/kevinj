@@ -1,7 +1,9 @@
 .contact {
     @include flex(column, space-evenly, center);
+    margin-top: 15rem;
 
     &--title {
+        font-size: 5rem;
         margin: 3rem;
     }
 

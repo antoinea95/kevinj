@@ -6,11 +6,12 @@
 .article {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 88vh;
   @include flex(row, center, center);
 
   @include mobileScreen {
-    @include flex(column, flex-start, center);
+    height: 75vh;
+    @include flex(column, center, center);
   }
 
   &--video {
@@ -65,11 +66,16 @@
 
     &__title {
       position: absolute;
-      top: 3%;
+      top: 1%;
       left: 50%;
       transform: translateX(-50%);
       font-size: 5vw;
       white-space: nowrap;
+
+      @include tabletScreen {
+        position: static;
+        transform: translateX(0);
+      }
     }
 
     &__right {
@@ -112,6 +118,7 @@
     transition: all 300ms ease-in-out;
     width: 100%;
     max-width: 100rem;
+    background-color: $secondary-color;
 
     @include tabletScreen {
       width: 90%;

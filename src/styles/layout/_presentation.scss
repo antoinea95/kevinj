@@ -1,16 +1,20 @@
 #presentation {
-    @include flex(row, space-between, center);
-    background-color: $secondary-color;
-    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFAF0;
+    height: 88vh;
     width: 100%;
     margin-top: 2rem;
-    position: sticky;
-    top: 30rem;
+    position: relative;
 
     @include tabletScreen {
         @include flex(column, center, center);
         padding: 10rem 3rem 3rem 3rem;
         height: 100%;
+        position: sticky;
+        top: 10rem;
     }
 }
 
@@ -41,8 +45,14 @@
         left: 25%;
         top: 5%;
 
+        @include tabletScreen {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
         h2 {
-            color: $primary-color;
+            color: $secondary-color;
             font-size: 10vw;
             margin: 1.1rem 0 0.5rem 0;
             white-space: nowrap;
@@ -63,12 +73,13 @@
         position: absolute;
         top: 35%;
         left: 40%;
-        color: $primary-color;
+        color: $secondary-color;
 
         @include tabletScreen {
+            position: initial;
             @include flex(column, flex-start, flex-start);
             padding-right: 0;
-            max-width: 35rem;
+            max-width: 60rem;
             width: 90%;
         }
 

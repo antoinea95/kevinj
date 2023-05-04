@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useEffect } from "react";
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -14,6 +14,7 @@ export default function Video({
   position,
 }) {
   const [isMobile, setIsMobile] = useState(false);
+  const articleRef = useRef(null);
 
   //choose the screen size
   const handleResize = () => {
@@ -31,35 +32,42 @@ export default function Video({
     window.addEventListener("resize", () => handleResize());
   }, []);
 
-  const showing = (elem) => {
-    gsap.fromTo(
-      elem,
-      {
-        opacity: 0,
-        x: elem === ".article-left" ? 1600 : -1600,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        delay: 0.2,
-        duration: 1,
-        scrollTrigger: {
-          trigger: elem,
-          start: elem === ".article-left" ? "top center" : "-250rem center",
-          end: "500rem center",
-          toggleActions: "play complete pause reset",
-        },
+
+    // create an event listener
+    useEffect(() => {
+      window.addEventListener("resize", handleResize);
+      handleResize();
+  
+      // define the animation
+      const showing = () => {
+        const elem = articleRef.current
+        gsap.fromTo(
+          elem,
+          {
+            opacity: 0,
+            x: 1600
+          },
+          {
+            opacity: 1,
+            x: 0,
+            delay: 0.2,
+            duration: 1,
+            scrollTrigger: {
+              trigger: elem,
+              start: isMobile ? "-100rem 30%" : "-140rem center",
+              end: "500rem center",
+              toggleActions: "play complete pause reset",
+            },
+          }
+        );
       }
-    );
-  };
 
-  useEffect(() => {
-    showing(".article-left");
-  }, []);
-
-  useEffect(() => {
-    showing(".article-right");
-  }, []);
+      showing();
+      // clean up function to remove the event listener
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
 
   const [fullVideo, setFullVideo] = useState(false);
 
@@ -72,7 +80,7 @@ export default function Video({
   }
 
   return position === "left" ? (
-    <article className="article article-left">
+    <article className="article article-left" ref={articleRef}>
       {fullVideo ? (
         <section className="article--fullVideo">
              <button
@@ -107,7 +115,7 @@ export default function Video({
       )}
     </article>
   ) : (
-    <article className="article article-right">
+    <article className="article article-right" ref={articleRef}>
       {fullVideo ? (
         <section className="article--fullVideo">
           <button

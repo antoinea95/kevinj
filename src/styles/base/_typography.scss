@@ -22,10 +22,7 @@ body {
 h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
-
-    @include tabletScreen {
-        font-size: 3rem;
-    }
+    font-size: 6vw;
 
 }
 

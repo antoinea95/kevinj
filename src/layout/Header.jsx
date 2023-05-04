@@ -56,8 +56,6 @@ export default function Header() {
     btnClose.classList.toggle("close");
   }
 
-  console.log(location)
-
   return (
     <>
       <header className={location === "" ? "header" : " header header--white"}>

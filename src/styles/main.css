@@ -134,11 +134,7 @@ body {
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
-}
-@media screen and (max-width: 1130px) {
-  h2 {
-    font-size: 3rem;
-  }
+  font-size: 6vw;
 }
 
 h3 {
@@ -306,8 +302,7 @@ h3 {
 }
 .archi--list__item {
   height: 80vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 300ms ease-in-out;
   cursor: pointer;
 }
@@ -374,7 +369,7 @@ h3 {
 .article {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 88vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -382,9 +377,10 @@ h3 {
 }
 @media screen and (max-width: 800px) {
   .article {
+    height: 75vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -392,8 +388,7 @@ h3 {
   position: relative;
   width: 50%;
   margin: 5rem 2.5rem 5rem 2.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -445,11 +440,17 @@ h3 {
 }
 .article--info__title {
   position: absolute;
-  top: 3%;
+  top: 1%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 5vw;
   white-space: nowrap;
+}
+@media screen and (max-width: 1130px) {
+  .article--info__title {
+    position: static;
+    transform: translateX(0);
+  }
 }
 .article--info__right {
   display: flex;
@@ -499,6 +500,7 @@ h3 {
   transition: all 300ms ease-in-out;
   width: 100%;
   max-width: 100rem;
+  background-color: #102a50;
 }
 @media screen and (max-width: 1130px) {
   .article--fullVideo {
@@ -611,8 +613,10 @@ h3 {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 15rem;
 }
 .contact--title {
+  font-size: 5rem;
   margin: 3rem;
 }
 .contact--form {
@@ -684,6 +688,12 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  mix-blend-mode: exclusion;
+}
+@media screen and (max-width: 800px) {
+  .header {
+    mix-blend-mode: normal;
+  }
 }
 .header--logo {
   width: 20rem;
@@ -696,6 +706,7 @@ h3 {
 }
 .header--white {
   background-color: #FFFAF0;
+  mix-blend-mode: normal;
 }
 
 .nav {
@@ -831,8 +842,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero--welcome {
   font-family: "Playfair Display", serif;
@@ -887,12 +897,11 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #102a50;
-  height: 100vh;
+  background-color: #FFFAF0;
+  height: 88vh;
   width: 100%;
   margin-top: 2rem;
-  position: sticky;
-  top: 30rem;
+  position: relative;
 }
 @media screen and (max-width: 1130px) {
   #presentation {
@@ -902,6 +911,8 @@ h3 {
     align-items: center;
     padding: 10rem 3rem 3rem 3rem;
     height: 100%;
+    position: sticky;
+    top: 10rem;
   }
 }
 
@@ -933,8 +944,15 @@ h3 {
   left: 25%;
   top: 5%;
 }
+@media screen and (max-width: 1130px) {
+  .presentation--title {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .presentation--title h2 {
-  color: #FFFAF0;
+  color: #102a50;
   font-size: 10vw;
   margin: 1.1rem 0 0.5rem 0;
   white-space: nowrap;
@@ -956,16 +974,17 @@ h3 {
   position: absolute;
   top: 35%;
   left: 40%;
-  color: #FFFAF0;
+  color: #102a50;
 }
 @media screen and (max-width: 1130px) {
   .presentation--text {
+    position: initial;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding-right: 0;
-    max-width: 35rem;
+    max-width: 60rem;
     width: 90%;
   }
 }
