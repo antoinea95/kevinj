@@ -47,7 +47,7 @@ import nature2 from "./images/photos/nature/nb1.webp";
 import nature3 from "./images/photos/nature/nb2.webp";
 import nature8 from "./images/photos/nature/nb3.webp";
 import nature5 from "./images/photos/nature/nb4.webp";
-import nature1 from "./images/photos/nature/Caméléon.webp";
+import nature1 from "./images/photos/nature/cameleon.webp";
 import nature4 from "./images/photos/nature/Coucou.webp";
 import nature6 from "./images/photos/nature/Hamster.webp";
 import nature7 from "./images/photos/nature/Loup.webp";
