@@ -5,8 +5,9 @@ import Architecture from './Architecture';
 import Montagne from "./Montagne";
 import Nature from './Nature';
 import { useState, useRef } from "react";
+import Lac from "./Lac";
 
-export default function Photographie({nature, shooting, archi, montagne, chill}) {
+export default function Photographie({nature, shooting, archi, montagne, chill, lac}) {
 
   const [ComponentName, setComponentName ] = useState('Shooting');
 
@@ -37,6 +38,7 @@ export default function Photographie({nature, shooting, archi, montagne, chill})
             <li className="photographie--item" onClick={selectCategory}> Architecture </li>
             <li className="photographie--item" onClick={selectCategory}> Montagne </li>
             <li className="photographie--item" onClick={selectCategory}> Nature </li>
+            <li className="photographie--item" onClick={selectCategory}> Lac </li>
           </ul>
 
           <>
@@ -44,6 +46,7 @@ export default function Photographie({nature, shooting, archi, montagne, chill})
               {ComponentName === 'Architecture' && <Architecture archi={archi} />}
               {ComponentName === 'Montagne' && <Montagne montagne={montagne}/>}
               {ComponentName === 'Nature' && <Nature nature={nature}/>}
+              {ComponentName === 'Lac' && <Lac lac={lac}/>}
           </>
       </main>
     </>

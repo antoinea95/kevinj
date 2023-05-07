@@ -43,14 +43,14 @@ import chill22 from "./images/photos/shooting/chill/chill_22.webp";
 import chill23 from "./images/photos/shooting/chill/chill_23.webp";
 import chill24 from "./images/photos/shooting/chill/chill_24.webp";
 
-import nature1 from "./images/photos/nature/nb1.webp";
-import nature2 from "./images/photos/nature/nb2.webp";
-import nature3 from "./images/photos/nature/nb3.webp";
-import nature4 from "./images/photos/nature/nb4.webp";
-import nature5 from "./images/photos/nature/Caméléon.jpg";
-import nature6 from "./images/photos/nature/Coucou.jpg";
-import nature7 from "./images/photos/nature/Hamster.jpg";
-import nature8 from "./images/photos/nature/Loup.jpg";
+import nature2 from "./images/photos/nature/nb1.webp";
+import nature3 from "./images/photos/nature/nb2.webp";
+import nature8 from "./images/photos/nature/nb3.webp";
+import nature5 from "./images/photos/nature/nb4.webp";
+import nature1 from "./images/photos/nature/Caméléon.webp";
+import nature4 from "./images/photos/nature/Coucou.webp";
+import nature6 from "./images/photos/nature/Hamster.webp";
+import nature7 from "./images/photos/nature/Loup.webp";
 
 import montagne1 from "./images/photos/nature/montagne-1.webp";
 import montagne2 from "./images/photos/nature/montagne-2.webp";
@@ -66,6 +66,13 @@ import montagne11 from "./images/photos/nature/montagne-12.webp";
 import montagne12 from "./images/photos/nature/montagne-13.webp";
 import montagne13 from "./images/photos/nature/montagne-14.webp";
 import montagne14 from "./images/photos/nature/montagne-15.webp";
+
+
+import lac1 from "./images/photos/lac/lac1.webp";
+import lac2 from "./images/photos/lac/lac2.webp";
+import lac3 from "./images/photos/lac/lac3.webp";
+import lac4 from "./images/photos/lac/lac4.webp";
+import lac5 from "./images/photos/lac/lac5.webp";
 
 import fouilloux from "./images/video/fouilloux-short.mp4";
 import villa from "./images/video/villa-renee-short.mp4";
@@ -133,6 +140,9 @@ const data = {
     montagne12,
     montagne13,
     montagne14
+  ],
+  lac: [
+    lac1,lac2,lac3,lac4,lac5
   ],
   videos: [
     {
@@ -220,7 +230,7 @@ const data = {
     {
       position: "right",
       name: "Villa Perle",
-      location: "Vallangoujardc",
+      location: "Vallangoujard",
       description: `La Villa Perle est une propriété de luxe situé à Vallangoujard, dans le nord de la France près de la région parisienne. Elle est construite dans un style architectural traditionnel provençal et dispose de plusieurs chambres, d’une cuisine entièrement équipé, d’une piscine extérieure dans un jardin paysager. La villa offre un cadre paisible et tranquille. `,
       video: villa,
       iframe: (

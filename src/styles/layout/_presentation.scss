@@ -43,7 +43,7 @@
 
     &--title {
         position: absolute;
-        left: 25%;
+        left: 39%;
         top: 5%;
 
         @include tabletScreen {
@@ -54,7 +54,7 @@
 
         h2 {
             color: $secondary-color;
-            font-size: 10vw;
+            font-size: 8vw;
             margin: 1.1rem 0 0.5rem 0;
             white-space: nowrap;
 

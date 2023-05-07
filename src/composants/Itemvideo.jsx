@@ -13,31 +13,13 @@ export default function Video({
   iframe,
   position,
 }) {
-  const [isMobile, setIsMobile] = useState(false);
   const articleRef = useRef(null);
 
-  //choose the screen size
-  const handleResize = () => {
-    if (window.innerWidth < 800) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
   gsap.registerPlugin(ScrollTrigger);
-
-  // create an event listener
-  useEffect(() => {
-    window.addEventListener("resize", () => handleResize());
-  }, []);
 
 
     // create an event listener
     useEffect(() => {
-      window.addEventListener("resize", handleResize);
-      handleResize();
-  
       // define the animation
       const showing = () => {
         const elem = articleRef.current
@@ -45,7 +27,7 @@ export default function Video({
           elem,
           {
             opacity: 0,
-            x: 1600
+            x: 1600,
           },
           {
             opacity: 1,
@@ -54,8 +36,8 @@ export default function Video({
             duration: 1,
             scrollTrigger: {
               trigger: elem,
-              start: isMobile ? "-100rem 30%" : "-140rem center",
-              end: "500rem center",
+              start: "-350rem center",
+              end: "400rem center",
               toggleActions: "play complete pause reset",
             },
           }
@@ -63,10 +45,6 @@ export default function Video({
       }
 
       showing();
-      // clean up function to remove the event listener
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
     }, []);
 
   const [fullVideo, setFullVideo] = useState(false);
@@ -79,9 +57,10 @@ export default function Video({
     setFullVideo(false);
   }
 
-  return position === "left" ? (
-    <article className="article article-left" ref={articleRef}>
-      {fullVideo ? (
+
+  return (
+    <article className="article" ref={articleRef}>
+      { fullVideo ? (
         <section className="article--fullVideo">
              <button
             className="article--fullVideo__btn"
@@ -114,57 +93,5 @@ export default function Video({
         </>
       )}
     </article>
-  ) : (
-    <article className="article article-right" ref={articleRef}>
-      {fullVideo ? (
-        <section className="article--fullVideo">
-          <button
-            className="article--fullVideo__btn"
-            onClick={handleCloseFullVideo}
-          >
-            X
-          </button>
-          {iframe}
-        </section>
-      ) : isMobile === false ? (
-        <>
-          <section className="article--info article--info__right">
-            <div className="article--info__title">
-              <h2> {name}</h2>
-            </div>
-
-            <p>{description}</p>
-            <div className="article--info__lieu">
-            <FontAwesomeIcon icon={faLocationDot} /> 
-            <p>{location}</p>
-            </div>
-          </section>
-          <section className="article--video" onClick={handleOpenFullVideo}>
-            <video loop autoPlay muted playsInline preload="none">
-              <source src={video} type="video/mp4" />
-            </video>
-          </section>
-        </>
-      ) : (
-        <>
-          <section className="article--video" onClick={handleOpenFullVideo}>
-            <video loop autoPlay muted playsInline preload="none">
-              <source src={video} type="video/mp4" />
-            </video>
-          </section>
-          <section className="article--info article--info__right">
-            <div className="article--info__title">
-              <h2> {name}</h2>
-            </div>
-
-            <p>{description}</p>
-            <div className="article--info__lieu">
-            <FontAwesomeIcon icon={faLocationDot} /> 
-            <p>{location}</p>
-            </div>
-          </section>
-        </>
-      )}
-    </article>
-  );
+  )
 }

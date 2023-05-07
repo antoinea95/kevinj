@@ -1,23 +1,29 @@
 .video {
   margin-top: 10rem;
+  overflow: hidden;
+  width: 100vw;
 }
 
 
 .article {
   position: relative;
-  width: 100%;
-  height: 88vh;
+  width: 100vw;
+  height: 80vh;
   @include flex(row, center, center);
+  overflow: hidden;
+
+  @include tabletScreen {
+    height: auto;
+  }
 
   @include mobileScreen {
-    height: 75vh;
     @include flex(column, center, center);
   }
 
   &--video {
 
     position: relative;
-    width: 50%;
+    width: 45%;
     margin: 5rem 2.5rem 5rem 2.5rem;
     object-fit: cover;
     cursor: pointer;
@@ -69,7 +75,6 @@
       top: 1%;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 5vw;
       white-space: nowrap;
 
       @include tabletScreen {

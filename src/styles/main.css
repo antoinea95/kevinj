@@ -134,7 +134,18 @@ body {
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: 6vw;
+  font-size: 4vw;
+}
+@media screen and (max-width: 1130px) {
+  h2 {
+    font-size: 2.9vw;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 6vw;
+  }
 }
 
 h3 {
@@ -343,7 +354,7 @@ h3 {
   }
 }
 .nature--list__item {
-  height: 80vh;
+  height: 49vh;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -364,20 +375,27 @@ h3 {
 
 .video {
   margin-top: 10rem;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .article {
   position: relative;
-  width: 100%;
-  height: 88vh;
+  width: 100vw;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 1130px) {
+  .article {
+    height: auto;
+  }
 }
 @media screen and (max-width: 800px) {
   .article {
-    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -386,7 +404,7 @@ h3 {
 }
 .article--video {
   position: relative;
-  width: 50%;
+  width: 45%;
   margin: 5rem 2.5rem 5rem 2.5rem;
   object-fit: cover;
   cursor: pointer;
@@ -443,7 +461,6 @@ h3 {
   top: 1%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 5vw;
   white-space: nowrap;
 }
 @media screen and (max-width: 1130px) {
@@ -562,6 +579,47 @@ h3 {
 }
 @media screen and (max-width: 800px) {
   .montagne--list__item {
+    width: 95%;
+  }
+}
+
+.lac {
+  width: 90%;
+  margin: 10rem auto;
+  margin: 15rem auto;
+}
+.lac--list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4vmin;
+  max-width: 200rem;
+  width: 95%;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .lac--list {
+    width: 95%;
+  }
+}
+.lac--list__item {
+  width: 60vh;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.lac--list__item:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1130px) {
+  .lac--list__item {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .lac--list__item {
     width: 95%;
   }
 }
@@ -942,7 +1000,7 @@ h3 {
 }
 .presentation--title {
   position: absolute;
-  left: 25%;
+  left: 39%;
   top: 5%;
 }
 @media screen and (max-width: 1130px) {
@@ -952,7 +1010,7 @@ h3 {
 }
 .presentation--title h2 {
   color: #102a50;
-  font-size: 10vw;
+  font-size: 8vw;
   margin: 1.1rem 0 0.5rem 0;
   white-space: nowrap;
 }
